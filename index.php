@@ -1,3 +1,5 @@
+<?php
+include("includes/db.php");?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,18 +117,26 @@
                 </ol>
                 <!-- carousel inner start -->
                 <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="images/pizza.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="images/momo.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="images/burger.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="images/ch-bg.jpg">
-                    </div>
+                    <?php
+                        $get_slider="select * from slider LIMIT 0,1";
+                        $run_slider=mysqli_query($con,$get_slider);
+                        while($row=mysqli_fetch_array($run_slider)){
+                            $slider_name=$row['slider_name'];
+                            $slider_image=$row['slider_image'];
+                            echo "<div class='item active'>
+                            <img src='admin_area/slider_image/$slider_image'></div>";
+                        }
+                    ?>
+                    <?php
+                        $get_slider="select * from slider LIMIT 1,3";
+                        $run_slider=mysqli_query($con,$get_slider);
+                        while($row=mysqli_fetch_array($run_slider)){
+                            $slider_name=$row['slider_name'];
+                            $slider_image=$row['slider_image'];
+                            echo "<div class='item'>
+                            <img src = 'admin_area/slider_image/$slider_image'></div>";
+                        }
+                    ?>
 
                 </div>
                 <!-- carousel inner end -->
@@ -170,7 +180,8 @@
 
                         </div>
                         <h3> <a href="#"> 100% OFF TOMMORROW </h3>
-                        <p> Free Food Tomorrow ;-) ! </p>
+                        <p> Free Food Tomorrow &#128525 !!
+                           <br>You,Our First Choice ! </p>
                     </div>
                 </div>
             </div>

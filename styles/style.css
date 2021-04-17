@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 :root {
   --toplink-color: #850101;
   --poppins-font: "Poppins", sans-serif;
   --quicksand: "Quicksand", sans-serif;
   --merienda: "Merienda", cursive;
+  --patrick: "Patrick Hand", cursive;
 }
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -14,7 +15,7 @@ body {
   font-size: 14px;
   line-height: 1.4285143;
   color: #333333;
-  background-color: #f0f0f0;
+  background-color: #d9afd96b;
 }
 /* dropdown */
 #navigation .dropdown {
@@ -54,7 +55,10 @@ h3,
 h2,
 h1 {
   font-family: var(--quicksand);
+  font-weight: 700;
+  color: rgb(54, 1, 1);
 }
+
 p.price {
   font-family: var(--merienda);
 }
@@ -64,7 +68,7 @@ p.price {
 }
 
 .navbar {
-  background-color: #f4fabd;
+  background-color: #fff;
 }
 .navbar-collapse .right {
   float: left;
@@ -124,7 +128,9 @@ p.price {
     margin: auto 10px;
   }
   #navbar img {
-    width: 50px;
+    width: 100px;
+    margin-left: -20px;
+    margin-top: -7px;
   }
 
   /*Header Style*/
@@ -135,7 +141,7 @@ p.price {
     height: 70px;
     top: 0;
     z-index: 10;
-    background-color: #f4fabd;
+    background-color: #fff;
   }
   .navbar-collapse .right {
     float: left;
@@ -202,7 +208,7 @@ p.price {
 
 /* advamtage style */
 .box {
-  background: #fff;
+  background-color: #ffffff9c;
   margin: 0 0 30px;
   border: solid 1px #e6e6e6;
   padding: 20px;
@@ -236,8 +242,11 @@ p.price {
 }
 #advantage .box p {
   position: relative;
-  color: #1a2347;
+  color: #220a06;
   z-index: 2;
+}
+#advantage .box a {
+  color: #1f176efb;
 }
 
 #hot h2 {
